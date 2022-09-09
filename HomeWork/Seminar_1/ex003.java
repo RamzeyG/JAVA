@@ -1,4 +1,4 @@
-//решение с рекурсией
+//решение задачи из семинара с рекурсией
 public class ex003 {
 
     static void recursion(int index, int[] ways, int com1, int com2, int start, int end){
@@ -19,7 +19,7 @@ public class ex003 {
     static int soleve(int start, int end, int com1, int com2){
         int[] ways = new int[end + 1];
         ways[start] = 1;
-        int index = start + com1;
+        int index = start + 1;
         recursion(index, ways, com1, com2, start, end);
        
 
@@ -27,6 +27,8 @@ public class ex003 {
         return ways[end];
 
     }
+    
+
 
     static String print(int[] items){
         StringBuilder sb = new StringBuilder();
@@ -36,6 +38,6 @@ public class ex003 {
         return sb.toString();
     }
     public static void main(String[] args){
-        System.out.println(soleve(2, 54, 2, 4));
+        System.out.println(soleve(2, 7, 3, 2));
     }
 }
